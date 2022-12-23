@@ -1,0 +1,17 @@
+export enum BrewMethod {
+  POUR_OVER = 'POUR_OVER',
+
+  FRENCH_PRESS = 'FRENCH_PRESS',
+
+  ESPRESSO = 'ESPRESSO',
+
+  AEROPRESS = 'AEROPRESS',
+
+  CHEMEX = 'CHEMEX',
+
+  MOKA_POT = 'MOKA_POT',
+
+  COLD_BREW = 'COLD_BREW',
+
+  KYOTO = 'KYOTO',
+}

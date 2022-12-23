@@ -1,0 +1,104 @@
+{
+  "applications": "*",
+  "changelogDate": "20221223212545",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "brew_card",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "brewMethod",
+      "fieldType": "BrewMethod",
+      "fieldValues": "POUR_OVER,FRENCH_PRESS,ESPRESSO,AEROPRESS,CHEMEX,MOKA_POT,COLD_BREW,KYOTO"
+    },
+    {
+      "fieldName": "coffeeType",
+      "fieldType": "CoffeeType",
+      "fieldValues": "ARABICA,ROBUSTA,LIBERICA,EXCELSA"
+    },
+    {
+      "fieldName": "coffeeRegion",
+      "fieldType": "CoffeeRegion",
+      "fieldValues": "AFRICA,ASIA,AMERICA,EUROPE,OCEANIA"
+    },
+    {
+      "fieldName": "coffeeSubregion",
+      "fieldType": "CoffeeSubregion",
+      "fieldValues": "ETHIOPIA,KENYA,RWANDA,UGANDA,TANZANIA,BURUNDI,INDONESIA,VIETNAM,COLOMBIA,BRAZIL,COSTA_RICA,GUATEMALA,HONDURAS,NICARAGUA,PANAMA,ITALY,FRANCE,GREECE,TURKEY,AUSTRALIA,NEW_ZEALAND"
+    },
+    {
+      "fieldName": "roastLevel",
+      "fieldType": "RoastLevel",
+      "fieldValues": "LIGHT,MEDIUM,MEDIUM_DARK,DARK"
+    },
+    {
+      "fieldName": "processingMethod",
+      "fieldType": "ProcessingMethod",
+      "fieldValues": "WASHED,NATURAL,HONEY"
+    },
+    {
+      "fieldName": "flavorProfile",
+      "fieldType": "FlavorProfile",
+      "fieldValues": "FRUITY,CHOCOLATY,NUTTY,SPICY,SWEET"
+    },
+    {
+      "fieldName": "coffeeWeight",
+      "fieldType": "Double",
+      "fieldValidateRules": ["min"],
+      "fieldValidateRulesMin": "0"
+    },
+    {
+      "fieldName": "waterWeight",
+      "fieldType": "Double",
+      "fieldValidateRules": ["min"],
+      "fieldValidateRulesMin": "0"
+    },
+    {
+      "fieldName": "waterTemp",
+      "fieldType": "Double",
+      "fieldValidateRules": ["min", "max"],
+      "fieldValidateRulesMax": "200",
+      "fieldValidateRulesMin": "0"
+    },
+    {
+      "fieldName": "brewTime",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["min"],
+      "fieldValidateRulesMin": "0"
+    },
+    {
+      "fieldName": "brewDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "equipment",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "notes",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "attachment",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "any"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "BrewCard",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "login",
+      "otherEntityName": "user",
+      "relationshipName": "user",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}
