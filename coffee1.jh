@@ -1,0 +1,96 @@
+relationship ManyToOne{
+	BrewCard{user(login)} to User
+}
+
+entity BrewCard {
+  name String
+  brewMethod BrewMethod
+  coffeeType CoffeeType
+  coffeeRegion CoffeeRegion
+  coffeeSubregion CoffeeSubregion
+  roastLevel RoastLevel
+  processingMethod ProcessingMethod
+  flavorProfile FlavorProfile
+  coffeeWeight Double min(0)
+  waterWeight Double min(0)
+  waterTemp Double min(0) max(200)
+  brewTime Integer min(0)
+  brewDate LocalDate
+  equipment String
+  notes String
+  attachment Blob
+}
+enum BrewMethod {
+  POUR_OVER,
+  FRENCH_PRESS,
+  ESPRESSO,
+  AEROPRESS,
+  CHEMEX,
+  MOKA_POT,
+  COLD_BREW,
+  KYOTO
+}
+
+enum CoffeeType {
+  ARABICA,
+  ROBUSTA,
+  LIBERICA,
+  EXCELSA
+}
+
+enum CoffeeRegion {
+  AFRICA,
+  ASIA,
+  AMERICA,
+  EUROPE,
+  OCEANIA
+}
+
+enum CoffeeSubregion {
+  ETHIOPIA,
+  KENYA,
+  RWANDA,
+  UGANDA,
+  TANZANIA,
+  BURUNDI,
+  INDONESIA,
+  VIETNAM,
+  COLOMBIA,
+  BRAZIL,
+  ETHIOPIA,
+  COSTA_RICA,
+  GUATEMALA,
+  HONDURAS,
+  NICARAGUA,
+  PANAMA,
+  ITALY,
+  FRANCE,
+  GREECE,
+  TURKEY,
+  AUSTRALIA,
+  NEW_ZEALAND
+}
+
+enum RoastLevel {
+  LIGHT,
+  MEDIUM,
+  MEDIUM_DARK,
+  DARK
+}
+
+enum ProcessingMethod {
+  WASHED,
+  NATURAL,
+  HONEY
+}
+
+enum FlavorProfile {
+  FRUITY,
+  CHOCOLATY,
+  NUTTY,
+  SPICY,
+  SWEET
+}
+
+dto * with mapstruct
+service * with serviceClass
