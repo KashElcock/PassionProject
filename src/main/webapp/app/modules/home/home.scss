@@ -8,3 +8,14 @@ Main page styles
   background: url('../../../content/images/jhipster_family_member_2.svg') no-repeat center top;
   background-size: contain;
 }
+
+.video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+// <video crossorigin="anonymous" preload="auto" autoplay="" src="/gcs/national-parks-service/en-us/9f885369-a52a-4a0b-8b2f-f3e5e41cdd54.mp4" style="width: 1460px; height: 821px; position: absolute; top: 0px; left: -654px;"></video>
