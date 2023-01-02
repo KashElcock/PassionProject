@@ -1,12 +1,13 @@
 import './header.scss';
-
+//{props.isAuthenticated && <EntitiesMenu />}/**/
 import React, { useState } from 'react';
 
 import { Navbar, Nav, NavbarToggler, Collapse } from 'reactstrap';
 import LoadingBar from 'react-redux-loading-bar';
 
 import { Home, Brand } from './header-components';
-import { AdminMenu, EntitiesMenu, AccountMenu } from '../menus';
+// import { AdminMenu, EntitiesMenu, AccountMenu } from '../menus';
+import { AdminMenu, AccountMenu } from '../menus';
 
 export interface IHeaderProps {
   isAuthenticated: boolean;
@@ -32,7 +33,7 @@ const Header = (props: IHeaderProps) => {
         <Collapse isOpen={menuOpen} navbar>
           <Nav id="header-tabs" className="ms-auto" navbar>
             <Home />
-            {props.isAuthenticated && <EntitiesMenu />}
+            {props.isAuthenticated}
             {props.isAuthenticated && props.isAdmin && (
               <AdminMenu showOpenAPI={props.isOpenAPIEnabled} showDatabase={!props.isInProduction} />
             )}

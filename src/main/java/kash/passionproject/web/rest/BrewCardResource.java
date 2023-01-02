@@ -144,6 +144,12 @@ public class BrewCardResource {
         return brewCardService.findAll();
     }
 
+    @GetMapping("/brew-cards/user")
+    public List<BrewCardDTO> getAllBrewCardsUser(@RequestParam(required = false, defaultValue = "false") boolean eagerload) {
+        log.debug("REST request to get all BrewCards by User");
+        return brewCardService.findAllUser();
+    }
+
     /**
      * {@code GET  /brew-cards/:id} : get the "id" brewCard.
      *

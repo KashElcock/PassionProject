@@ -17,6 +17,9 @@ public interface BrewCardRepository extends JpaRepository<BrewCard, Long> {
     @Query("select brewCard from BrewCard brewCard where brewCard.user.login = ?#{principal.username}")
     List<BrewCard> findByUserIsCurrentUser();
 
+    //    @Query("SELECT * FROM BREW_CARD WHERE USER_ID = 2")
+    //    List<BrewCard> findByUserIsCurrentUser();
+
     default Optional<BrewCard> findOneWithEagerRelationships(Long id) {
         return this.findOneWithToOneRelationships(id);
     }

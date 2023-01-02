@@ -50,39 +50,33 @@ export const Home = () => {
 
           <ul>
             <li>
-              <a href="api/brew-cards" target="_blank" rel="noopener noreferrer">
+              {/*              <Link to="/brew-card" target="_blank" rel="noopener noreferrer"> */}
+              <Link to="/brew-card" rel="noopener noreferrer">
                 All Brew Cards
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="https://stackoverflow.com/tags/jhipster/info" target="_blank" rel="noopener noreferrer">
-                JHipster on Stack Overflow
-              </a>
+              {/*               <a href="https://stackoverflow.com/tags/jhipster/info" target="_blank" rel="noopener noreferrer"> */}
+              <Link to="/brew-card-user" rel="noopener noreferrer">
+                Your Brew Cards
+              </Link>
             </li>
             <li>
               <a href="https://github.com/jhipster/generator-jhipster/issues?state=open" target="_blank" rel="noopener noreferrer">
-                JHipster bug tracker
+                Most Recent Brew Cards
               </a>
             </li>
             <li>
               <a href="https://gitter.im/jhipster/generator-jhipster" target="_blank" rel="noopener noreferrer">
-                JHipster public chat room
+                Your Friends Brew Cards
               </a>
             </li>
             <li>
               <a href="https://twitter.com/jhipster" target="_blank" rel="noopener noreferrer">
-                follow @jhipster on Twitter
+                follow @Sipp on Twitter!
               </a>
             </li>
           </ul>
-
-          <p>
-            If you like JHipster, don&apos;t forget to give us a star on{' '}
-            <a href="https://github.com/jhipster/generator-jhipster" target="_blank" rel="noopener noreferrer">
-              GitHub
-            </a>
-            !
-          </p>
         </Col>
       </Row>
     </div>

@@ -18,6 +18,11 @@ const apiUrl = 'api/brew-cards';
 
 // Actions
 
+// export const getbrewCards = createAsyncThunk('brewCard/fetch_entity_list', async (queryParams: IQueryParams, thunkAPI) => {
+//   const result = await axios.get<IBrewCard[]>(apiUrl, { params: queryParams });
+//   return result.data;
+// });
+
 export const getEntities = createAsyncThunk('brewCard/fetch_entity_list', async ({ page, size, sort }: IQueryParams) => {
   const requestUrl = `${apiUrl}?cacheBuster=${new Date().getTime()}`;
   return axios.get<IBrewCard[]>(requestUrl);

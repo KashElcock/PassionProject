@@ -90,6 +90,16 @@ public class BrewCardService {
         return brewCardRepository.findAll().stream().map(brewCardMapper::toDto).collect(Collectors.toCollection(LinkedList::new));
     }
 
+    @Transactional(readOnly = true)
+    public List<BrewCardDTO> findAllUser() {
+        log.debug("Request to get all BrewCards by User");
+        return brewCardRepository
+            .findByUserIsCurrentUser()
+            .stream()
+            .map(brewCardMapper::toDto)
+            .collect(Collectors.toCollection(LinkedList::new));
+    }
+
     /**
      * Get all the brewCards with eager load of many-to-many relationships.
      *
